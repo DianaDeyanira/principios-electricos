@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html lang ="es">
+<head>
+<meta charset ="UTF-8">
+<head>
+<title> Amplificadores Operacionales </title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+<h1>Amplificadores Operacionales|Unidad 2</h1>
+</head>
+<body>
+    <center>
+    <section>
+<p>el componente electrónico conocido como amplificador operacional es realmente un circuito complejo formado por muchos transistores y otros componentes en un solo circuito integrado.
+     
+<br><br>El amplificador operacional tiene dos entradas. En la primera etapa se amplifica levemente la diferencia de las mismas. Esto se suele expresar también diciendo que se amplifica el modo diferencial de las señales, mientras que el modo común se rechaza. Posteriormente se pasa a segunda etapa de ganancia intermedia, en la que se amplifica nuevamente el modo diferencial filtrado por la primera. La ganancia total es muy elevada, típicamente del orden de 105. Finalmente, en la última etapa no se amplifica la tensión, sino que se posibilita el suministrar fuertes intensidades.
+<br><br>Para que este dispositivo pueda funcionar es obvio que necesitará una fuente de alimentación que polarice sus transistores internos. Habitualmente se emplean dos fuentes de alimentación, una positiva y otra negativa. De este modo se permite que la salida sea de uno u otro signo. Evidentemente, la tensión de salida nunca podrá superar los límites que marquen las alimentaciones. No olvidemos que el operacional está formado por componentes no generadores.
+<br><br>Una vez realizada esta presentación, hay que aclarar que en la mayoría de los casos, es posible conocer el comportamiento de un circuito en el que se inserta un operacional sin tener en cuenta su estructura interna. Para ello vamos a definir, como siempre, un componente ideal que nos permita una primera aproximación. Y también como es habitual, los cálculos rigurosos necesitarán de modelos más complejos, para los que sí es necesario estudiarlo más profundamente.
+
+<br>El operacional tiene cinco terminales:
+<ul>
+    <li>Entrada no inversora (V+)</li>
+<li>Entrada inversora (V-)</li>
+<li>Alimentación positiva (ECC)</li>
+<li>Alimentación negativa (-ECC)</li>
+<li>Salida (VOUT)</li>
+</ul
+<br>
+A la hora de resolver circuitos se suelen omitir las alimentaciones, ya que como se verá, no afectan al funcionamiento. La representación circuital está formada por una resistencia de entrada, que une los dos terminales, y un generador de tensión de salida. La tensión de salida es proporcional a la diferencia de las entradas.
+<br>Las características más relevantes del amplificador operacional son:
+<ul>
+    <li>Resistencia de entrada muy elevada: A menudo es mayor que 1 M.</li>
+<li>Ganancia muy elevada: Mayor que 105.</li></ul>
+<br>Las consecuencias que se derivan de estas características son:
+<li>La corriente de entrada es nula: Al ser la resistencia de entrada tan elevada, la corriente que circula por los terminales inversor y no inversor puede despreciarse.</li>
+<li>La ganancia puede considerarse infinita.</li>
+
+<h4>La realimentación</h4>
+El concepto de realimentación implica que la entrada del amplificador operacional no es independiente de la salida. Parte de la señal de salida se aplica a la entrada, con lo que se puede controlar la ganancia.
+
+<h4>Amplificador no inversor</h4>
+<center><img src="css/imagenes/amplificador%20no%20inversor.gif" width="500" height="300" ></center>
+<h5>Ecuaciones del circuito</h5>
+<i>e+ = VIN</i>
+<br><i>e- = - R1 I1 => I1 </i>
+<i>VOUT = - I1 (R1 + R2)</i>
+<br><br>Como características más llamativas cabe destacar
+
+<li>Ganancia del circuito independiente de la del operacional.</li>
+<li>Ganancia fijada por el cociente de dos resistencias.</li>
+<li>Resistencia de entrada infinita.</li>
+<li>La entrada y la salida son del mismo signo (no inversor)</li>
+<h4>Amplificador Inversor</h4>
+<center><img src="css/imagenes/AmplificadorInversor.gif" width="500" height="300"></center>
+<h5>Ecuaciones del circuito</h5>
+<i>e+ = 0</i>
+    <br><i>e- = VIN - R1 I1 = 0 </i>
+    <i>VOUT = - I1 R2</i>
+ <br><br>Como características más llamativas cabe destacar
+
+<ul><li>Ganancia del circuito independiente de la del operacional.</li>
+<li>Ganancia fijada por el cociente de dos resistencias.</li>
+<li>Resistencia de entrada R1.</li>
+<li>La entrada y la salida son de signo opuesto (inversor)</li>
+</ul>
+<h4>Comparador</h4>
+Suponiendo que el operacional se alimenta a ECC:
+
+<br><i>VIN > VREF => VOUT = ECC</i>
+
+<br><i>VIN > VREF => VOUT = - ECC</i>
+
+</p>
+        </section></center>
+    </body>
+</html>

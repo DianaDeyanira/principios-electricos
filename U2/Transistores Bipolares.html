@@ -1,0 +1,113 @@
+<!DOCTYPE>
+<html lang ="es">
+<head>
+<meta charset ="UTF-8">
+<head>
+<title> Transistores Bipolares </title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+<h1>Transistores Bipolares|Unidad 2</h1>
+</head>
+<body>
+    <center>
+<section>
+<p>
+El transistor de unión bipolar (del inglés bipolar junction transistor, o sus siglas BJT) es un dispositivo electrónico de estado sólido consistente en dos uniones PN muy cercanas entre sí, que permite aumentar la corriente y disminuir el voltaje, además de controlar el paso de la corriente a través de sus terminales. La denominación de bipolar se debe a que la conducción tiene lugar gracias al desplazamiento de portadores de dos polaridades (huecos positivos y electrones negativos), y son de gran utilidad en gran número de aplicaciones; pero tienen ciertos inconvenientes, entre ellos su impedancia de entrada bastante baja.
+<br>Los transistores bipolares son los transistores más conocidos y se usan generalmente en electrónica analógica aunque también en algunas aplicaciones de electrónica digital, como la tecnología TTL o BICMOS.
+<br>Un transistor de unión bipolar está formado por dos Uniones PN en un solo cristal semiconductor, separados por una región muy estrecha. De esta manera quedan formadas tres regiones:
+<br>
+<ul> 
+<li>Emisor, que se diferencia de las otras dos por estar fuertemente dopada, comportándose como un metal. Su nombre se debe a que esta terminal funciona como emisor de portadores de carga.</li>
+<li>Base, la intermedia, muy estrecha, que separa el emisor del colector.</li>
+<li>Colector, de extensión mucho mayor.</li>
+
+<h4>Construccion</h4>
+<li>Dispositivo semiconductor de tres capas: dos de material tipo n y una tipo p,
+llamado transistor npn; o dos de material tipo p y una de tipo n, llamado
+transistor pnp.</li>
+<li>Las capas exteriores se denominan colector y emisor, la capa intermedia se
+denomina base.</li> 
+<li>La capa del emisor está muy dopada, la base ligeramente dopada y el
+colector está un poco dopado.</li>
+<h4>Operación del BJT</h4>
+<li>Se analizará el funcionamiento de un transistor pnp.</li> 
+<li>La unión p-n de un transistor se polariza en inversa, mientras que la
+otra se polariza en directa.</li>
+
+<li>Como el material de la base es muy delgado y su conductividad baja,
+unos pocos portadores se irán en esa dirección. IB normalmente es
+del orden de microamperes. </li>
+<li>La mayoría de los portadores mayoritarios se difundirá a través de la
+unión polarizada en inversa hacia el material tipo p.</li> 
+<li>En polarización inversa, los portadores mayoritarios inyectados
+aparecerán como portadores minoritarios en el material tipo n. </li>
+<li>Todos los portadores minoritarios de la región de empobrecimiento
+atravesarán la unión polarizada en inversa.</li>
+ 
+<h4>Base Común</h4>
+<li>La base es común tanto para la entrada como para la salida de la
+configuración.</li>
+<li>La flecha en el símbolo gráfico define la dirección de la corriente del
+emisor (flujo convencional) a través del dispositivo.</li>
+    <h5>Región del corte</h5>
+<li>Las uniones base-emisor y colector-base se polarizan en inversa. </li>
+<li>La corriente del colector, así como la del emisor, es 0A.</li>
+    <h5>Región de saturación</h5>
+<li>Es la región de las características a la izquierda de cuando VCB = 0.</li>
+<li>Al incrementarse VCB hacia 0V hay un incremento exponencial en la
+corriente del colector. </li>
+<li>Las uniones base-emisor y colector-base se polarizan en directa.</li>
+<h4>Alfa (α)</h4>
+<li>En modo de cd de operación los niveles de IC e IE originados por los portadores mayoritarios están relacionados por una cantidad llamada 
+
+<h4>Emisor Común</h4>
+    La configuración de emisor común es la más usada. En él, el transistor actúa como un amplificador de la corriente y de la tensión. Aparte de los efectos de amplificación, también invierte la tensión de señal, es decir, si la tensión es tendente a positiva en la base pasa a ser tendente a negativa en el colector; pero, como estos efectos se producen con la corriente alterna.
+    
+<br>El valor de la corriente de base va a depender del valor de la resistencia RB, la corriente que circula por el colector, IC, depende de la corriente de base, IB, como hemos visto con la formula IC = b . IB; IC es mucho más grande que IB y ese aumento viene dado por b , que es un parámetro característico del transistor.
+<br>Al pasar la corriente por RC se va a producir una caída de potencial; luego, la tensión que obtengamos a la salida, también va a depender del valor de esta resistencia. Podemos colocar una resistencia en el emisor, que llamaremos RE, que va a perjudicar mucho la amplificación de tensión, pero va a hacer que el transistor sea mucho más estable y no le afecten los cambios de la temperatura.
+<h4>Colector Común</h4>
+<br>Se utiliza principalmente para acoplamiento de impedancias, ya que
+tiene una alta impedancia de entrada y una baja de salida, lo
+contrario de las configuraciones anteriores.
+<center><img src="css/imagenes/ColectorComun.png" width="600" height="400"></center>
+<li>La figura muestra una configuración de circuito de colector común. </li>
+<li> Se pueden diseñar utilizando las características de emisor común.</li>
+<li>Para fines prácticos, las características de salida son las mismas que
+para la configuración de emisor común.</li>
+<li>Las características de salida se grafican como IE en función de VCE para un rango de valores de IB (la corriente de entrada por tanto será la misma).</li>
+<li>El eje horizontal se obtiene cambiando el signo del voltaje del
+colector al emisor.</li>  
+<li>El cambio de la escala vertical al reemplazar IC por IE será casi imperceptible ya que α ≈ 1.</li>
+
+        </ul>
+   
+Del circuito de arriba es fácil obtener la relación que existe entre la corriente de colector Ic y la
+tensión colector-emisor VCE del transistor, aplicando la ley de Kirchoff resulta:
+ <br><center><i>Vcc = VCE + IC . RC</i></center>
+Esta expresión se conoce como ecuación de la recta de carga. En ella Vcc y RC son constantes, y VCE e IC son las variables. La intersección entre esta recta de carga con la curva característica de salida del transistor determina el punto de reposo Q. Para trazar la recta en el plano IC = f (VCE) es suficiente con establecer los puntos de corte con los ejes de coordenadas. Cuando la corriente de colector es cero IC = 0, la tensión colector-emisor es igual al potencial
+del generador VCE = Vcc:
+<br> <center><i>IC = 0; VCE = Vcc</i></center>
+<br>Por otro lado, cuando la tensión colector-emisor es igual a cero VCE = 0, la corriente de colector
+vale el potencial del generador entre la resistencia de colector IC = Vcc/RC:
+    <br><center><i>VCE = 0; IC = Vcc/RC</i></center>
+
+<br>En la figura se muestra el circuito de polarización y la recta de carga estática con el punto
+de reposo Q que representa la intersección de esta recta con la curva IB correspondiente.
+El valor de la corriente de base IB se puede calcular aplicando la ley de Kirchoff al circuito de entrada o de base, así tenemos:
+<br><center><i>Vcc = VBE + IB . RB</i></center>
+<br>Sabemos que el transistor entre base-emisor se comporta como un diodo, así que la tensión base-emisor para el silicio suele ser de 0,7 V, es decir:
+<center><i>VBE = 0,7 V</i></center>
+<br>Entonces para un dado valor constante de la fuente de alimentación Vcc tenemos que la corriente de base solo depende de RB y vale:
+<br><center><i>IB = (Vcc – 0,7V)/ RB
+</i></center>
+<br>Sabemos también que existe una relación entre las tres corrientes del transistor:
+<br><center><i>IC = β.IB</i></center>
+<br> De la 2ª ley de Kirchoff:
+<br><center><i>IE = IC + IB = (β+1).IB</i></center>
+<br>La ganancia de corriente del transistor para continua se conoce como β o hFE, y no tiene unidades ya que relaciona IC/IB.
+
+    </p>
+</section>
+</center>
+</body>
+    
+</html>

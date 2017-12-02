@@ -1,0 +1,134 @@
+<!DOCTYPE>
+<html lang= "es">
+<head>
+<meta charset="UTF-8">
+<title> Familia T.T.L</title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+    <h1>Familia T.T.L|Unidad 3</h1>
+</head>
+<body>
+<center><section>
+    <p>
+Una familia lógica es un grupo de dispositivos digitales que comparten una tecnología
+común de fabricación y tienen estandarizadas sus características de entrada y de salida; es decir,
+son compatibles entre sí. Como consecuencia de la estandarización, la interconexión entre dispositivos lógicos de
+una misma familia es particularmente sencilla y directa: no requiere de etapas adicionales de
+acoplamiento.
+    <h4>Características generales de las familias lógicas.</h4>
+Las características más importantes de un circuito digital son su velocidad, su consumo de
+potencia, su inmunidad al ruido y su confiabilidad.
+    <ul>
+    <li>
+ La velocidad mide la rapidez de respuesta de las salidas de un circuito digital a cualquier
+cambio en sus entradas.</li>
+    <li> El consumo de potencia mide la cantidad de corriente o de potencia que consume un
+circuito digital en operación.</li>
+<li> La inmunidad al ruido mide la sensibilidad de un circuito digital al ruido electromagnético
+ambiental. </li>
+<li>La confiablidad mide el período útil de servicio de un circuito digital.</li>
+    </ul> 
+<h4>Familia lógica T.T.L</h4>
+La familia lógica TTL es la más común de todas las familias lógicas. Los circuitos integrados TTL implementan su lógica interna, exclusivamente basándose en transistores NPN y PNP, diodos y resistencias. La familia TTL está disponible en dos versiones: la serie 54 y la serie 74. La primera se destina a aplicaciones militares y la segunda a aplicaciones industriales y de propósito general. La familia TTL o bipolar se divide en las siguientes categorías o subfamilias básicas: 
+ <ul>   <li>TTL estándar. </li>
+    <li> TTL Schottky (S).</li>
+<li>TTL de baja potencia (L).</li>
+<li> TTL Schottky de baja potencia (LS).</li>
+<li> TTL de alta velocidad (H).</li>
+<li>TTL Schottky avanzada (AS).</li>
+     <li> TTL Schottky de baja potencia avanzada (ALS).</li></ul>
+<h5>Tensión de alimentación (+ VCC). </h5>
+Los circuitos TTL en general, pueden operar con tensiones entre 4.75 V. y 5.25 V. Pero el valor nominal de la tensión de trabajo es de + 5 volts.
+<h5>Niveles de voltaje.</h5>
+ <ul>
+<li>De 0 V. a 0.8 V. para el estado bajo.</li>
+ <li>De 2.4 V. A 5 V. para el estado alto.</li>
+    </ul>
+<h5>FAMILIA LÓGICA CMOS</h5>
+ La familia lógica CMOS, utiliza transistores MOSFET complementarios canal N y canal P como elementos básicos de conmutación. Los circuitos integrados digitales fabricados mediante tecnología CMOS se pueden agrupar en las siguientes categorías o subfamilias básicas:
+<ul><li>CMOS estándar.</li>
+ <li>CMOS de alta velocidad (HC).</li>
+ <li>CMOS compatible con TTL (HCT).</li>
+<li> CMOS equivalente a TTL (C).</li>
+</ul>
+</h5>Familia CMOS estándar.</h5>
+La familia CMOS estándar comprende principalmente los dispositivos que se designan como 40XX (4012, 4029, etc.) y 45XX (4528, 4553, etc.). Existen dos series generales de dispositivos CMOS designadas “A” y “B”. Los dispositivos de la serie “A” se designan con el sufijo “A” o simplemente no lo traen impreso (4011A = 4011). Todos los dispositivos de la serie “B” llevan el sufijo B. La principal diferencia entre los dispositivos de las series A y B esta en que los CMOS “B” contienen una circuiteria interna de protección que reduce el riesgo de daño al dispositivo por el fenómeno de descarga electrostática.
+<h5>Tensión de alimentación (+ VDD).</h5>
+ Tienen un amplio margen de tensión comprendido entre + 3 V. y + 18 V.
+<h5>Niveles de voltaje</h5>
+<ul> <li>De 0 V. a 0.3 VDD para el estado bajo.</li>
+ <li>De 0.7 VDD a VDD para el estado alto. </li></ul>
+<h4>PRECAUCIONES A TOMAR EN EL MANEJO DE DISPOSITIVOS CMOS.</h4>
+Todos los dispositivos CMOS son muy susceptibles al daño ocasionado por descarga electrostática entre cualquier par de pines. La electrostática o electricidad estática consiste en la creación de altos voltajes en la superficie de un material aislante por efecto de fricción o frotamiento.
+<ul><li> Conservar el circuito integrado en su contenedor original hasta que sea insertado en el circuito de aplicación.</li>
+<li>Conectar todas las entradas no empleadas a un nivel estable. No dejarlas sin conectar.</li>
+<li> Verificar la polaridad de la fuente de alimentación. El positivo debe ir al pin +VDD y el
+negativo o tierra al pin VSS.</li>
+</ul>
+<h4>INTERFACES LOGICAS</h4>
+ Una interface es la interconexión eficiente de dos dispositivos, circuitos o sistemas que no
+son compatibles entre sí y tienen características eléctricas diferentes.
+ Las interfaces lógicas o reales permiten que dispositivos de diferentes familias o
+subfamilias puedan comunicarse entre sí.
+<h5>Interfaces entre familias lógicas</h5>
+ Existen situaciones donde se hace necesario interconectar dispositivos pertenecientes a
+diferentes familias lógicas con el fin de aprovechar las ventajas que cada tecnología ofrece. Para
+que esta interconexión sea eficiente, deben conocerse las características de entrada y de salida de
+las familias lógicas comprometidas.
+ Cada familia lógica interpreta de manera diferente un nivel alto o bajo de voltaje y tiene sus
+propios requisitos de corriente de entrada y de salida. Por esta razón, dos familias lógicas no se
+pueden conectar directamente: necesitan de una interface que las comunique y acople sus
+características de voltaje y corriente.
+    <h5>Interfaces de TTL a CMOS</h5>
+ Una entrada CMOS es relativamente fácil de manejar a partir de una salida TTL cuando los
+dispositivos involucrados en la interface operan a partir de una misma fuente de + 5 V. Las
+características de corriente de salida de TTL son más que adecuadas para manejar entradas
+CMOS. Sólo deben hacerse compatibles los niveles de voltaje.
+    <h5>Interface TTL estándar a CMOS con resistencia.</h5>
+ La resistencia R acopla los niveles de voltaje de ambas familias. Su valor fluctúa entre 330
+Ω y 15 KΩ. Un valor típico es de 1 KΩ. 
+
+<h5>Interface TTL-LS a CMOS con resistencia.  </h5>
+La resistencia R acopla los niveles de voltaje de ambas familias.
+
+<h5>Interface de un dispositivo CMOS con un voltaje diferente de + 5V. </h5>
+Cuando el dispositivo CMOS opera a un voltaje de alimentación diferente de + 5V, la
+interface entre una salida TTL, y una entrada CMOS es más compleja, pero existen varias formas
+de hacerlo. 
+<h5>Interface de TTL a CMOS con colector abierto. </h5>
+Este método emplea una salida de TTL de colector abierto de alto voltaje conectada a la
+entrada CMOS a través de una resistencia de pull-up. Este método es muy apropiado para muchas
+aplicaciones, pero presenta el inconveniente de ser muy susceptible al ruido. 
+<center><img src="css/imagenes/colector%20abierto.png" width="500" height="300"></center>
+    <h5>Interface básica de TTL a CMOS con transistor. </h5>
+    Una solución más adecuada es emplear un transistor de propósito general conectado en la
+configuración de emisor común. El transistor y las resistencias R1 y R2 desplazan los niveles necesarios para operar los niveles de voltaje de la salida TTL, a los valores necesarios para operar
+la entrada CMOS. 
+
+<h5>Interface mejorada de TTL a CMOS. </h5>
+    En esta interfaz se emplean dos resistencias (R1 y R2) en el circuito base para mejorar la
+inmunidad al ruido. El condensador C reduce el tiempo que dura un cambio en la salida TTL en
+manifestarse en la entrada CMOS. Es decir, mejora la velocidad de la interface. 
+ <center><img src="css/imagenes/interface%20mejorada.png" width="500" height="300"></center> 
+<h5>Interfaces de CMOS a TTL </h5>
+    Una salida CMOS puede manejar directamente una entrada 74LS ó 74L cuando ambos
+dispositivos operen a partir de una misma fuente de + 5 V. 
+
+    <h5>Interface directa de CMOS a TTL estándar. </h5>
+    Una salida CMOS no puede manejar directamente una entrada TTL estándar debido a su
+limitada capacidad de corriente. Las únicas excepciones son los circuitos integrados 4001B y
+4002B. 
+  
+    <h5>Interface de CMOS a TTL-LS con resistencia. </h5>
+Esta interface es una forma muy sencilla de conectar una salida CMOS a una entrada TTLLS.
+El diodo D bloquea el voltaje procedente de la salida CMOS cuando esta última está en el
+estado alto. La resistencia R hace alta la entrada TTL cuando el diodo queda inversamente
+polarizado. Se emplea un diodo de germanio para mejorar la inmunidad al ruido. 
+
+    <h5>Interface de CMOS a TTL con transistor.</h5>
+    Este método emplea un transistor NPN de propósito general. Este transistor, en conjunto
+con sus resistencias de polarización (R1, R2 y R3), convierte niveles lógicos CMOS en niveles
+lógicos TTL. 
+ 
+    </p></section></center>
+    </body>
+</html>

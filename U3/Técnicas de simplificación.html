@@ -1,0 +1,85 @@
+<!DOCTYPE>
+<html lang= "es">
+<head>
+<meta charset="UTF-8">
+<title> Técnicas de simplificación</title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+    <h1>Técnicas de simplificación|Unidad 3</h1>
+</head>
+<body>
+<center><section>
+    <p>
+    Una vez que se obtiene la expresión booleana para un circuito lógico, podemos reducirla a una forma más simple que contenga menos términos, la nueva expresión puede utilizarse para implantar un circuito que sea equivalente al original pero que contenga menos compuertas y conexiones. 
+<h4>EXPRESIONES BOOLENAS EN FORMA DE MINTERMINOS (SUMA DE PRODUCTOS).</h4>
+  Cuando se comienza un problema de diseño lógico, lo normal es construir primero una tabla de verdad, que detalle la operación exacta del circuito digital. Considerar la tabla de verdad 2, que contiene las variables C, B y y A.
+<br><br>Observar que sólo dos combinaciones de variables generan una salida 1. Estas combinaciones se muestran en la lineas octava y segunda (sombreadas) de la tabla de verdad. La linea 2 se lee « una entrada no C Y (AND) una entrada no B Y (AND) una entrada A generan una salida I ».
+
+<br>Esto se muestra en la parte derecha de la linea 2 con la expresión booleana C·B·A. La otra combinación de variables que genera un 1 se muestra en la linea 8 de la tabla de verdad. La linea 8 se lee «una entrada C Y (AND) una entrada B Y (AND) una entrada A generan una salida 1». La expresión booleana de la linea 8 aparece a la derecha y es C · B · A.
+<br>Estas dos posible combinaciones se relacionan mediante el operador OR para formar la expresión booleana completa de la tabla de verdad, que se muestra en la tabla 2, como C · B · A + C·B · A = Y. Esta expresión, a veces, se denomina forma en suma de productos de la expresión booleana. Los ingenieros también llaman a esta forma, forma de minterms.
+<br>Esta expresión puede traducirse al patrón AND-OR de puertas lógicas. El diagrama lógico de la Figura 5.3.c realiza la lógica descrita por la expresión booleana C · B · A + C ·B· A = Y , y genera la tabla de verdad 2.
+    <center><img src="css/imagenes/Expresion%20booleana.png" width="500" height="300"></center>
+<h4>Simplificación Algebraica</h4>
+El álgebra booleana (Algebra de los circuitos lógicos tiene muchas leyes o teoremas muy útiles tales como : 
+
+<br>Ley de Morgan
+<li>A + B = A·B</li> 
+ <li>A*B = A + B</li>
+<br>Ley Distributiva
+<li>A+(B·C) = (A+B)·(A+C)</li>
+<li>A·(B+C) = A·B+A·C</li>
+
+<br>Ademas de las leyes formales para las funciones AND y OR : 
+
+<li>A·0 = 0 ; A+0 = A</li>
+<li> A*1 = A ; A+1 = 1 </li>
+<li>A*A = A ; A+A = A </li>
+<li>A*A = 0 ; A+A = 1</li>
+<br>Ley de la Involución: 
+<li>A(negada) = A</li>
+s  
+<h6>Aplicando el álgebra booleana</h6>
+<ul>
+<br>A·B + A·B + A·B = Y
+<br><br>RAZONES
+    <li>= A·B + (A·B + A·B) , Propiedad asociativa</li>
+<li>= A·B + B·(A+A) , 4. [A·(B + C) = A·B + A·C]</li
+<li>= A·B + B·1 , 8. [A + A = 1]</li>
+<li>= A·B + B , 6. [B·1 = B]</li>
+<li>= B + A·B , Propiedad conmutativa
+<li>= (B + A)·(B + B) , 3. [A + (B·C) = (A + B)·(A + C)]</li>
+<li>= (B + A)·1 , 8. [A + A = 1]</li>
+<li>= B + A , 6. [A * 1 = A]</li>
+    </ul>
+Concluimos entonces que una sola puerta OR de dos entradas realiza la misma función (¡ De hecho la tabla 1 corresponde a la función OR !)
+<h4>DIAGRAMAS DE KARNAUGH </h4>
+Es un metodo grafico que se utiliza para simplificar circuitos lógicos en un proceso simple y ordenado. Es metodo que se basa en los teoremas booleanos estudiados anteriormente y su utilidad practica se limita a 5 variables. Las reglas a seguir son las siguientes: 
+<ul><li>
+A partir de la tabla de verdad sacar las expresiones booleanas en forma de minterns o maxterms.
+<li>Colocar los 1 corespondientes en el diagrama por cada grupo de variables operadas por AND si es en forma de minterns u operadas por OR si es en forma de maxterms.</li>
+<li>Agrupar los 1 adyacentes (las agrupaciones se realizan en grupos de 2, 4, 8 1)</li>
+<li>Eliminar las variables que aparezcan con su complemento.</li>
+<li>Enlazamos con OR los resultados obtenidos (si es en forma de minterns) o con AND (si es en forma de maxterms).</li>  
+ </ul>  
+
+Luego procedemos a colocar cada 1 correspondiente en el diagrama por cada grupo de variables operadas con AND (para nuestro ejemplo). Los diagramas de Karnaugh pueden presentarse de dos maneras diferentes: la americana y la alemana, demos un vistazo a dichas presentaciones:
+    <br><br>Diagramas de Karnaugh para 2 variables 
+     <center><img src="css/imagenes/Americana,%20Alemana.gif" width="500" height="300"></center>
+    <br><br>Diagramas de Karnaugh para 3 variables 
+     <center><img src="css/imagenes/Americana,%20Alemana,3variables.gif" width="500" height="300"></center
+        
+       
+         <br><br>Luego procedemos a agrupar los 1 adyacentes que se encuentren en el diagrama, estas agrupaciones se realizan en grupos de 2, 4, o de 8 "1" . Debemos tratar en lo posible de no realizar tantas agrupaciones.
+        
+         <center>Agrupación de términos </center>
+         <br><br>Despues de realizar las agrupaciones eliminanos por cada grupo las variables que aparezcan con su complemento. En el agrupamiento de 2 "1" se elimina una variable; en el agrupamiento de 4 "1" se eliminan 2 variables y en el agrupamiento de 8 "1" se eliminan 3 variables.
+       
+         <center>Eliminación de términos </center>
+         Por ultimo enlazamos con OR (ya que nuestro ejemplo es en forma de minterns) los resultados que obtuvimos de la eliminación de variables.
+<i>Q = A +B</i>
+De esta manera la ecuacion logica Q=(A·B)+(A·B)+(A·B) nos quedaría reducida a una puerta OR
+         
+    </p>
+    </section>
+    </center>
+    </body>
+</html>

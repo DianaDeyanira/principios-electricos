@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html lang= "es">
+<head>
+<meta charset="UTF-8">
+<title> Temporizadores</title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+<h1>Temporizadores|Unidad 3</h1>
+</head>
+<body>
+<center><section>
+    <p>
+El 555 es un circuito integrado cuya función principal es producir pulsos de temporización con precisión, entre sus funciones secundarias están la de oscilador, divisor de frecuencia, modulador o generador.
+<br>Este circuito integrado incorpora dentro de si, dos comparadores de voltaje, un flip flop, una etapa de salida de corriente, un divisor de voltaje por resistor y un transistor de descarga. Dependiendo de como se interconecten estas funciones utilizando componentes externos es posible conseguir que dicho circuito realiza un gran numero de funciones tales como la del multivibrador astable y la del circuito monoestable.
+<br>El 555 tiene diversas aplicaciones, como: Control de sistemas secuenciales, divisor de frecuencias, modulación por ancho de pulso, generación de tiempos de retraso, repetición de pulsos, etc.
+<center><img src="css/imagenes/555.gif" width="500" height="300"></center>
+      <h5>  Funcionamiento</h5>
+
+Se alimenta de una fuente externa conectada entre sus terminales 8 (+Vcc) y 1(GND) tierra; el voltaje de la fuente va desde los 5 voltios hasta 15 voltios de corriente continua, la misma fuente se conecta a un circuito pasivo RC, que proporciona por medio de la descarga de su capacitor una señal de voltaje que esta en función del tiempo, esta señal de tensión es de 1/3 de Vcc y se compara contra el voltaje aplicado externamente sobre la terminal 2 (TRIGGER) que es la entrada de un comparador. 
+<br>La terminal 6 (THRESHOLD) se ofrece como la entrada de otro comparador, en la cual se compara a 2/3 de la Vcc contra la amplitud de señal externa que le sirve de disparo. 
+<br>La terminal 5(CONTROL VOLTAGE) se dispone para producir modulación por anchura de pulsos, la descarga del condensador exterior se hace por medio de la terminal 7 (DISCHARGE), se descarga cuando el transistor (NPN) T1, se encuentra en saturación, se puede descargar prematuramente el capacitor por medio de la polarización del transistor (PNP) T2. 
+
+<h4>Circuito astable básico</h4>
+Si se usa en este modo el circuito su principal característica es una forma de onda rectangular a la salida, en la cual el ancho de la onda puede ser manejado con los valores de ciertos elementos en el diseño. 
+<br>Para esto debemos aplicar las siguientes formulas: 
+<li><i>TA = 0.693 * (R1+R2) * C1 </i></li>
+<li></i>TB = 0.693 * (R2*C1) </i></li>
+<br>Donde TA es el tiempo del nivel alto de la señal y TB es el tiempo del nivel bajo de la señal.
+Estos tiempo dependen de los valores de R1 y R2. Recordemos que el periodo es = 1/f.
+<br>La frecuencia con que la señal de salida oscila está dada por la fórmula: f = 1/(0.693 * C1 * (R1 + 2 * R2))
+<center><img src="css/imagenes/circuito%20astable%20basico.gif" width="500" height="300"></center>
+
+<h4>Circuito monoestable</h4>
+En este caso el timmer 555 en su modo monoestable funcionará como un circuito de un tiro. Dentro del 555 hay un transistor que mantiene a C1 descargado inicialmente. Cuando un pulso negativo de disparo se aplica a terminal 2, el flip-flop interno se setea, lo que quita el corto de C1 y esto causa una salida alta (un high) en el terminal 3 (el terminal de salida). 
+<br>La salida a través del capacitor aumenta exponencialmente con la constante de tiempo:
+
+<center><br><br><i>t = R1 * C1</i></center>
+
+<br><br>Cuando el voltaje a través de C1 iguala dos tercios de Vcc el comparador interno del 555 se resetea el flip-flop, que entonces descarga el capacitor C1 rápidamente y lleva al terminal de salida a su estado bajo (low). El circuito e activado con un impulso de entrada que va en dirección negativa cuando el nivel llega a un tercio de Vcc. Una vez disparado, el circuito permanece en ese estado hasta que pasa el tiempo de seteo, aun si se vuelve a disparar el circuito. 
+<br>La duración del estado alto (high) es dada por la ecuación: 
+<i>T= 1.1 * (R1*C1)</i>
+<br>El intervalo es independiente del voltaje de Vcc. Cuando el terminal reset no se usa, debe atarse alto para evitar disparos espontáneos o falsos.
+    
+    
+    </p>
+    </section>
+    </center>
+    </body></html>

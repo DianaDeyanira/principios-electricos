@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html lang= "es">
+<head>
+<meta charset="UTF-8">
+<title> Métodos de diseño</title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+<h1>Diseño de circuitos combinacionales| Unidad 3</h1>
+</head>
+<body>
+<center><section>
+    <p>
+Un sistema combinacional es un circuito lógico cuyas salidas están completamente
+determinadas en cualquier instante por los valores aplicados a sus variables de entrada. Son circuitos que no tienen bucles de realimentación, es decir una salida no puede usarse como
+entrada de una etapa anterior.
+   
+En electrónica digital la lógica combinacional está formada por ecuaciones simples a partir de las operaciones básicas del álgebra de Boole. Entre los circuitos combinacionales clásicos tenemos:
+<ul>
+<i>Lógicos</i>
+<li>Generador/Detector de paridad</li>
+<li>Multiplexor y Demultiplexor</li>
+<li>Codificador y Decodificador</li>
+<li>Conversor de código</li>
+<li>Comparador</li>
+<i>Aritméticos</i>
+<li>Sumador</li>
+<i>Aritméticos y lógicos</i>
+<li>Unidad aritmético lógica</li>
+</ul>
+Estos circuitos están compuestos únicamente por puertas lógicas interconectadas entre sí, sin ningún biestable o celda de memoria.
+<h4>Funciones Combinacionales</h4>
+Todos los circuitos combinacionales pueden representarse empleando álgebra de Boole a partir de su función lógica, generando de forma matemática el funcionamiento del sistema combinacional. De este modo, cada señal de entrada es una variable de la ecuación lógica de salida. Por ejemplo, un sistema combinacional compuesto exclusivamente por una puerta AND tendría dos entradas A y B. Su función combinacional sería {\displaystyle F=A\cdot B} F=A\cdot B, para una puerta OR sería {\displaystyle F=A+B\,} F=A+B\,. Estas operaciones se pueden combinar formando funciones más complejas.
+    
+Esto permite emplear diferentes métodos de simplificación para reducir el número de elementos combinacionales que forman el sistema.
+<h4>Circuito Multiplexor</h4>
+Los multiplexores son circuitos combinacionales con varias entradas y una única salida de datos. Están dotados de entradas de control capaces de seleccionar una, y sólo una, de las entradas de datos para permitir su transmisión desde la entrada seleccionada hacia dicha salida.
+<br>En el campo de la electrónica el multiplexor se utiliza como dispositivo que puede recibir varias entradas y transmitirlas por un medio de transmisión compartido. Para ello lo que hace es dividir el medio de transmisión en múltiples canales, para que varios nodos puedan comunicarse al mismo tiempo.
+
+Una señal que está multiplexada debe demultiplexarse en el otro extremo.
+<br>Según la forma en que se realice esta división del medio de transmisión, existen varias clases de multiplexación:
+<ul>
+<li>Multiplexación por división de frecuencia</li>
+<li>Multiplexación por división de tiempo</li>
+<li>Multiplexación por división de código</li>
+<li>Multiplexación por división de longitud de onda</li>
+</ul>
+<h4>Demultiplexor</h4>
+En electrónica digital, un demultiplexor es un circuito combinacional que tiene una entrada de información de datos d y n entradas de control que sirven para seleccionar una de las 2n salidas, por la que ha de salir el dato que presente en la entrada. Esto se consigue aplicando a las entradas de control la combinación binaria correspondiente a la salida que se desea seleccionar. Por ejemplo, si queremos que la información que tenemos en la entrada d, salga por la salida S4, en la entrada de control se ha de poner, de acuerdo con el peso de la mísma, el valor 100, que es el 4 en binario.
+
+<h4>Codificacor</h4>
+Un codificador es un circuito combinacional con 2N entradas y N salidas, cuya misión es presentar en la salida el código binario correspondiente a la entrada activada.
+
+Existen dos tipos fundamentales de codificadores: codificadores sin prioridad y codificadores con prioridad. En el caso de codificadores sin prioridad, puede darse el caso de salidas cuya entrada no pueda ser conocida: por ejemplo, la salida 0 podría indicar que no hay ninguna entrada activada o que se ha activado la entrada número 0. Además, ciertas entradas pueden hacer que en la salida se presente la suma lógica de dichas entradas, ocasionando mayor confusión. Por ello, este tipo de codificadores es usado únicamente cuando el rango de datos de entrada está correctamente acotado y su funcionamiento garantizado.
+
+
+
+<h4>Decodificador</h4>
+Un decodificador o descodificador es un circuito combinacional, cuya función es inversa a la del codificador, es decir, convierte un código binario de entrada (natural, BCD, etc.) de N bits de entrada y M líneas de salida (N puede ser cualquier entero y M es un entero menor o igual a 2N), tales que cada línea de salida será activada para una sola de las combinaciones posibles de entrada. Normalmente, estos circuitos suelen encontrarse como decodificador / demultiplexor. Esto es debido a que un demultiplexor puede comportarse como un decodificador.
+ 
+<h5>Aplicaciones de un decodificador</h5>
+Su función principal es la de direccionar espacios de memoria. Un decodificador de N entradas es capaz de direccionar 2N espacios de memoria.
+<br>Para poder direccionar 1Kib de memoria se necesitarían 10 bits, ya que la cantidad de salidas seria 210, igual a 1024.
+<br>De esta manera:
+<ul>
+<li>Con 20 bits se tienen 220 lo que equivale a 1Mib.</li>
+</li>Con 30 bits se tienen 230 lo que equivale a 1Gib.</li></ul>
+<h4>Conversor de código</h4>
+Un conversor de código puede hacerse simplemente conectando un decodificador a un codificador. Por ejemplo, podemos imaginar un decodificador de binario natural BCD, es decir, un descodificador con 4 entradas y 16 salidas de las que utilizamos 10 (las correspondientes a las combinaciones binarias en BCD de los dígitos decimales desde el 0 hasta el 9. Estas 10 salidas las conectamos a las entradas de un codificador de código binario Gray, el cuál tendrá 4 salidas. Acabamos de hacer un conversor de código de BCD natural a binario Gray.
+<br>En resumen, se puede decir que un conversor de código es un elemento lógico que traduce una palabra de "n" bits a otra de "m" bits las cuales se refieren al mismo valor decimal, pero en "distintos códigos". En el ejemplo anterior los códigos son el binario natural y el Gray.
+    <h4>Circuito Comparador</h4>
+Un circuito comparador combinatorio compara dos entradas binarias (A y B de n bits) para indicar la relación de igualdad o desigualdad entre ellas por medio de "tres banderas lógicas" que corresponden a las relaciones A igual B, A mayor que B y A menor que B. Cada una de estas banderas se activara solo cuando la relación a la que corresponde sea verdadera, es decir, su salida será 1 y las otras dos producirán una salida igual a cero.
+<br>Dentro de la familia de circuitos TTL se les denomina a estos circuitos con el número 7485 y manejan entradas de 4 bits, además de que también se les puede conectar en cascada para manejar entradas más grandes.
+
+<H4>Sumador</H4>
+Un sumador es un circuito digital que realiza la adición de números. En muchas computadoras y otros tipos de procesadores se utilizan sumadores en las unidades aritméticas lógicas. También se utilizan en otras partes del procesador, donde se utilizan para calcular direcciones, índices de tablas, operadores de incremento y decremento y operaciones similares.
+     <center><img src="css/imagenes/Sumador.png" width="500" height="300"></center>
+Aunque los sumadores se pueden construir para muchas representaciones numéricas, tales como decimal codificado en binario o exceso-3, los sumadores más comunes funcionan en números binarios. En los casos en que se utiliza el complemento a dos o el complemento a uno para representar números negativos, es trivial modificar un sumador para convertirlo en un sumador-restador. Otras representaciones de números con signo requieren más lógica alrededor del sumador básico.
+     <center><img src="css/imagenes/FuncionamientoSumador.gif" width="500" height="300"></center>
+
+    
+    </section>
+    </center>
+    </body>
+    </html>

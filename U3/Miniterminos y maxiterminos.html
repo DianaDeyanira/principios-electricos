@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html lang= "es">
+<head>
+<meta charset="UTF-8">
+<title> Miniterminos y Maxiterminos</title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+<h1>Miniterminos y Maxiterminos</h1>
+</head>
+<body>
+<center><section>
+    <p>
+<br><br>A diferencia que los miniterminos en los maxiterminos utilizamos las salida falsas (0) y en caso que una de las variables sea verdadera (1) se tiene que cambiar falsa (0) y para eso se niega la variable un ejemplo seria cuando A = 0, B= 0, C = 1, A+B+C, en este caso hay una variable verdadera la cual se tiene que cambiar a falsa (0) y quedaría A = 0, B = 0, C’= 0, A+B+C’, esta seria la forma en que se obtiene cada uno de los maxiterminos.
+<br><br>Después de obtener cada uno de los maxiterminos entre estos se multiplica y la salida en función de los maxiterminos quedaría de la siguiente forma:
+<br><br>S = (A+B+C’) (A+B’+C) (A’+B+C) (A’+B+C’)
+<br><br>SE LLAMA MINITERMINO A EL PRODUCTO DE TODAS LAS VARIABLES DE ENTRADA O SU NEGADO
+<br><br>Teniendo las salidas se utilizan únicamente las salidas verdaderas (1) y viendo el número de términos que son (en este caso 3, A, B, C) y cuando en la combinación es falsa (0) se cambia a verdadera (1), un ejemplo para cuando las variables son falsas(0) seria ABC = A’B’C’ en este caso se cambiaron todas las combinaciones que había ya que todas eran falsas se convierten a verdaderas para ello se tienen que negar y cuando todas las entradas o una es verdadera no se niega la variable y se queda como esta.
+<br><br>Después de haber obtenido cada uno de los miniterminos se unen en forma de suma y por lo consiguiente quedarían de las siguientes formas los miniterminos:
+<br><br>S = A’B’C’ + A’BC + ABC’ + ABC
+
+    </p>
+    </section>
+    </center>
+    </body>
+</html>

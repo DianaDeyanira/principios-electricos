@@ -1,0 +1,136 @@
+<!DOCTYPE>
+<html lang= "es">
+<head>
+<meta charset="UTF-8">
+<title> Algebra de Boole</title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+<h1>Algebra de Boole| Unidad 3</h1>
+</head>
+<body>
+<center><section>
+    <p>UN ÁLGEBRA DE BOOLE ES UN SISTEMA DE ELEMENTOS B={0,1} Y LOS OPERADORES BINARIOS (·) y (+) y (’) 
+<ul>
+<li>OPERADOR + -> OPERADOR OR </li>
+<li>OPERADOR · -> OPERADOR AND</li>
+<li>OPERADOR ‘ -> OPERADOR NOT</li>
+    </ul>
+QUE CUMPLEN LAS SIGUIENTES PROPIEDADES:
+<ul>PROPIEDAD CONMUTATIVA:
+<li>A + B = B + A</li>
+<li>A · B = B · A</li>
+ PROPIEDAD DISTRIBUTIVA:
+<li>A·(B+C) = A·B + A·C</li>
+<li>A + B·C = (A+B)·(A+C)</li>
+ELEMENTOS NEUTROS DIFERENTES:
+<li>A + 0 = A</li>
+<li>A · 1 = A</li>
+SIEMPRE EXISTE EL COMPLEMENTO DE A, DENOMINADO A’:
+<li>A + A’ = 1</li>
+<li>A · A’ = 0</li>
+</ul>
+<h5>Principio de dualidad</h5>
+Cualquier teorema o identidad algebraica deducible de los postulados anteriores puede transformarse en un segundo teorema o identidad válida sin mas que intercambiar (+) por (·) y 1 por 0.
+<h5>Constante</h5>
+Cualquier elemento del conjunto B
+<h4>TEOREMAS DEL ÁLGEBRA DE BOOLE</h4>
+<h5>TEOREMA 1</h5> el elemento complemento A’ es único.
+<h5>TEOREMA 2 (ELEMENTOS NULOS)</h5> para cada elemento de B se verifica:
+<ul><li>A+1 = 1</li>
+<li>A·0 = 0</li>
+</ul>
+<h5>TEOREMA 3</h5> cada elemento identidad es el complemento del otro.
+<ul>
+<li>0’=1</li>
+<li>1’=0</li>
+    </ul>
+<h5>TEOREMA 4 (IDEMPOTENCIA)</h5> para cada elemento de B, se verifica:
+<ul><li>A+A=A</li>
+<li>A·A=A</li>
+    </ul>
+<h5>TEOREMA 5 (INVOLUCIÓN)</h5> para cada elemento de B, se verifica:
+<ul><li>(A’)’ = A</li></ul>
+<h5>TEOREMA 6 (ABSORCIÓN)</h5> para cada par de elementos de B, se verifica:
+<ul><li>A+A·B=A</li>
+<li>A·(A+B)=A</li></ul>
+<h5>TEOREMA 7</h5> para cada par de elementos de B, se verifica:
+<ul><li>A + A’·B = A + B</li>
+<li>A · (A’ + B) = A · B</li></ul>
+<h5>TEOREMA 8 (ASOCIATIVIDAD)</h5> cada uno de los operadores binarios (+) y
+(·) cumple la propiedad asociativa:
+<ul><li>A+(B+C) = (A+B)+C</li>
+<li>A·(B·C) = (A·B)·C</li></ul>
+<h5>LEYES DE DEMORGAN</h5> para cada par de elementos de B, se verifica:
+<ul><li>(A+B)’ = A’·B’</li>
+<li>(A·B)’ = A’ + B’</li></ul>
+<h4>REPRESENTACIÓN DE FUNCIONES LÓGICAS (I)</h4>
+<h5>TABLA DE VERDAD</h5>
+Tabla que representa el valor de la función para cada combinación de entrada. Si la función está definida para todas las combinaciones se llama completa, si no, se denomina incompleta.
+Una Fórmulas de conmutación es la expresión de una función Lógica.
+<ul>Un LITERAL es una variable (A) o complemento de una variable (A’)</li>
+<li>Un TÉRMINO PRODUCTO es una operación AND de un número de
+literales.</li>
+<li>Una fórmula normal disyuntiva es una suma de términos productos.</li>
+<li>Un TÉRMINO SUMA es una operación OR de un número de literales.</li>
+</ul>
+<h4>REPRESENTACIÓN DE FUNCIONES LÓGICAS (II)</h4>
+<h5>FÓRMULA CANÓNICA DISYUNTIVA (SOP)</h5>
+<ul>
+<li>MINTÉRMINO (mi): término producto en el que aparecen todas las
+variables, ya sean complementadas o sin complementar.</li>
+<li>FÓRMULA CANÓNICA DISYUNTIVA O DE MINTÉRMINOS: suma de mintérminos. (Suma de Productos)
+<br>Dada la lista completa de mintérminos y asignando 1’s y 0’s
+arbitrariamente a las variables, siempre hay un, y sólo un, mintérmino que
+toma el valor 1.
+<br>Un mintérmino es un término producto que es 1 exactamente en una línea
+de la tabla de Verdad.
+La fórmula compuesta por todos los mintérminos será idénticamente 1.
+Cada fórmula de conmutación puede expresarse como suma de
+mintérminos. Y esa fórmula es única.
+<br><br>NOTACIÓN: Un mintérmino se designa por “mi” siendo i el número
+decimal correspondiente de la tabla de verdad. Para el producto, el 0 se
+asocia a la variable complementada y el 1 a la variable sin complementar.</li>
+</ul>
+<h6>Ejemplo</h6>
+      <center><img src="css/imagenes/formaCanonicaDisyuntiva.png" width="500" height="300"></center>
+ <h4>REPRESENTACIÓN DE FUNCIONES LÓGICAS (III)
+</h4> <h5>FÓRMULA CANÓNICA CONJUNTIVA (POS)</h5> 
+<ul><li>MAXTÉRMINO (Mi): término suma en el que aparecen todas las variables,
+ya sean complementadas o sin complementar.</li>
+<li>Fórmula Canónica Conjuntiva o de Maxtérminos: producto de maxtérminos. (Producto de sumas).
+<br>Dada la lista completa de maxtérminos y asignando 1’s y 0’s arbitrariamente a las variables, siempre hay un y sólo un maxtérmino que
+toma el valor 0.
+<br>Un maxtérmino es un término suma que es 0 exactamente en una línea de
+la tabla de verdad.
+<br>La fórmula compuesta por todos los maxtérminos será idénticamente 0.
+Cada fórmula puede expresarse como producto de maxtérminos. Y es
+única.
+<br><br>NOTACIÓN: Un maxtérmino se designa por “Mi” siendo i el número
+decimal correspondiente de la tabla de verdad. En la suma, el 1 se asocia a
+la variable complementada y el 0 a la variable sin complementar.
+E</li></ul>
+<h6>Ejemplo</h6>
+ <center><img src="css/imagenes/formaCanonicaConjuntiva.png" width="500" height="300"></center>
+<h4>REPRESENTACIÓN DE FUNCIONES LÓGICAS (IV)</h4>
+    <h5>CONVERSIÓN Y MANIPULACIÓN DE FÓRMULAS</h5>
+El complemento de una fórmula de mintérminos está formado por la suma de
+los mintérminos que no aparecen.
+<br>El complemento de una fórmula de maxtérminos está formado por el producto de los maxtérminos que no aparecen.
+<ul><li>mi’ = Mi</li>
+<li>Mi’ = mi</li></ul>
+La transformación de una fórmula de mintérminos (disyuntiva) en otra de
+maxtérminos (conjuntiva) se basa en la doble complementación,
+<ul><li>(F’)’ = F</li>
+</ul>
+Para FUNCIONES INCOMPLETAS en la tabla de verdad aparecerá una X o
+una letra d (del inglés don’t care) refiriéndose a términos sin especificar.
+Complemento de una función incompleta: otra función incompleta con los
+mismos términos “no importa” y el complemento de la función completa.
+<br>Las fórmulas de mintérminos y de maxtérminos de las funciones incompletas no
+son únicas.
+
+    
+    </p>
+    </section>
+    </center>
+    </body>
+    </html>

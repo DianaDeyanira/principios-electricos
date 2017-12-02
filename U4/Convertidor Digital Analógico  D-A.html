@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html lang= "es">
+<head>
+<meta charset="UTF-8">
+<title> Convertidores</title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+    <h1>Convertidor Digital Analógico (D/A) |Unidad 4</h1>
+</head>
+<body>
+<center><section>
+    <p>
+  <h4>Circuito eléctrico de un convertidor Digital- Analógico</h4>
+    En la actualidad existen varios métodos y circuitos para producir la operación de Digital-Analógico. Por lo
+que no es tan importante conocer los diversos esquemas de circuitos, ya que los convertidores D/A
+están disponibles como CI o bien como paquetes encapsulados que no requieren ningún conocimiento
+de circuitos. En su lugar, es importante conocer las características significativas de realización de los
+convertidores D/A, en términos generales, de manera que se puedan utilizar en forma inteligente. A
+continuación se muestra como ejemplo el circuito básico de un tipo de convertidor D/A de 4 bits
+utilizando un amplificador operacional en configuración de sumador con resistencias con factores de
+ponderación binaria.
+<center><img src="css/imagenes/circuito.png" width="500" height="300"></center>
+El operador operacional sirve como amplificador sumador, el cual produce la suma de los factores de
+ponderación de estos valores de entrada. Un amplificador operacional sumador multiplica cada voltaje de
+entrada por la proporción de la resistencia de retroalimentación Rs de la entrada correspondiente. Por
+ejemplo: la entrada D tiene una R =1 KΩ, de manera que el amplificador operacional pasa el voltaje de D
+sin atenuación. La entrada C tiene una R= 2KΩ, de manera que será atenuada en ½ . La entrada B tiene
+una R=4KΩ, de manera que será atenuada en ¼. La entrada A tiene una R=8KΩ, de manera que será
+atenuada, en 1/8.
+<center><i>Vsal= - (VD +1/2 VC +1/4 VB +1/8 VA)</i></center>
+<br>La salida del amplificador sumador es un voltaje analógico que representa una suma de los factores de
+ponderación de las entradas digitales.
+<br><br>La conversión digital-analógica (D/A) es el proceso de tomar a un valor
+representando en código digital (como binario directo o BCD) y convertirlo en un voltaje o corriente que
+sea proporcional al valor digital. Como ejemplo, a continuación se ilustra el diagrama a bloques, su tabla
+de valores y sus formas de onda de salida de un contador de 4 bits, para convertir de digital a analógica,
+su señal en código digital. En general: 
+<center><i>Salida analógica= K * entrada digital</i></center>
+   <br> K= factor proporcionalidad y tiene un valor constante, puede estar en unidades de voltaje o corriente.
+
+<h6>Ejemplo 1.</h6>
+Un convertidor D/A de 5 bits tiene una corriente de salida. Para una entrada digital de 10100, se produce
+una corriente de salida de 10 mAmp. ¿Cual será el valor de la corriente de salida para una entrada digital
+de 11101?
+<br>Sabemos que: 101002=2010
+1<br>0100=k*20=10mAmp
+<br>K=10/20mAmp=0.5 mAmp.
+<br>11101=29
+La salida digital de la computadora se conecta a un DAC, que la
+convierte a un voltaje o corriente proporcional a la información de bits que tiene a su entrada.
+<h5>Actuador</h5> Es un circuito ó dispositivo que sirve como actuador para el control de la variable física, regida
+por la señal analógica que proviene del DAC. Ejemplo: Máquinas robotizadas, automotrices, etc.
+ 
+    </p>
+    </section>
+    </center>
+    </body></html>

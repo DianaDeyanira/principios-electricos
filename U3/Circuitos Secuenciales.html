@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html lang= "es">
+<head>
+<meta charset="UTF-8">
+<title> Circuitos secuenciales</title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+<h1>Circuitos secuenciales|Unidad 3</h1>
+</head>
+<body><center>
+<section>
+<p>
+Son aquellos en los cuales las salidas en un instante de tiempo
+determinado dependen de las entradas en ese instante y en instantes
+anteriores de tiempo, podemos llegar a la conclusión de que este tipo de circuitos son capaces de memorizar información
+y que esta información en un momento dado depende de las entradas ocurridas en el circuito hasta ese momento.
+<br>El circuito no es capaz de memorizar todas las entradas ocurridas hasta
+un instante de tiempo determinado, sino solo una cierta parte.
+<h4>Lógica secuencial</h4>
+Los circuitos secuenciales utilizan un concepto de la teoría de circuitos llamado lógica secuencial. La lógica secuencial se basa en el estado de las entradas, así como en los datos almacenados en la memoria del circuito. Uno de los aspectos más importantes de la lógica secuencial es el concepto de "flip-flops". Los flip-flops son conmutadores internos en un circuito secuencial que son, ya sea abiertos, permitiendo el flujo de información; o cerrados, inhibiendo el flujo de información. Depende de una serie de factores establecidos por el ingeniero. Esto permite la construcción de sistemas complejos que pueden completar una amplia gama de funciones.
+<h4>Circuitos síncronos</h4>
+
+Los circuitos síncronos hacen uso de flip-flops y compuertas lógicas. Similar a los flip-flops, las compuertas lógicas o permiten o restringen el flujo de información en función de determinadas situaciones, tales como si dos variables son iguales una a otra. Un tipo específico de circuito síncrono, llamado circuito cronometrado secuencial, utiliza pulsos de reloj. Los pulsos de reloj se utilizan para sincronizar los diferentes elementos del circuito, tales como los flip-flops. Los flip-flops en un circuito cronometrado secuencial sólo se ven afectados cuando se les indica mediante un pulso de reloj. 
+<h4>Circuitos asíncronos</h4>
+Un circuito asíncrono es el que registra el orden en el que cambian sus variables de entrada, y envía una salida que depende del resultado. Este tipo de circuito también debe ser capaz de cambiar sus variables de entrada en cualquier momento. Hay también un tipo específico de circuito asíncrono, denominado circuito asíncrono tipo compuerta. Los circuitos tipo compuerta son circuitos combinacionales esencialmente (es decir, que se basan únicamente en la entrada actual) con un camino de realimentación. El camino de realimentación significa que la información de la salida puede ser realimentada en la entrada. Debido a la retroalimentación, estos tipos de circuitos pueden ser inestables, por lo que no se usan comúnmente.
+
+
+<h4>Usos de circuitos secuenciales</h4>
+
+<h4>RESETABLE JK FLIP - FLOP</h4>
+Muchas veces se requiere flip-flops tipo JK que puedan ser Set y Reset a estados conocidos, antes de que ellos inicien su uso en un proceso particular. Por ejemplo, si se dispone de varios flip-flops para efectuar un trabajo en equipo, es prácticamente un requisito poderlos colocar con todas sus salidas en un nivel igual, lógico 1 o lógico =. Para esta función, el integrado tiene dos terminales auxiliares, marcados PRESET (PR) y CLEAR (CLR). El preset coloca en estado lógico 1 en la salida Q cuando es alimentado con un pulso bajo; si esto se hace con la entrada clear, el la salida Q aparece un estado lógico 0. se considera que las entradas preset y clear están en un nivel inactivo, cuando se las mantiene en alto(libres, "al aire"). A las entradas "clear" y "preset" se les conoce como "entradas de control prioritario", a las entradas "j" y "k" se les denomina "entradas de control simple".
+
+<h4>CIRCUITO MONO - ESTABLE (ONE - SHOT)</h4>
+Básicamente, el one-shot es un circuito con una sola entrada y dos salidas complementarias, Q y no-Q. Un pulso activo en la entrada, hace que el circuito cambie su estado, permanezca así invertido durante un período de tiempo dado, y luego retorne automáticamente a su estado original. El one.shot es un circuito mono-estable(monostable), o sea que tiene un estado definido al que siempre retornará.
+<br>Al one-shot se le conoce también como circuito IGUALADOR DE PULSOS, ya que, aunque los pulsos de disparo (trigger) tengan diferente ancho (width), los pulsos a la salida serán siempre iguales, con el mismo ancho o largo(tiempo que permanece el pulso en determinado nivel). Los circuitos monoestables son ampliamente usados como temporizadores, retardadores de pulsos, en toda clase de procesos industriales.
+
+
+<h4>MULTIVIBRADOR</h4>
+Es una forma de circuito oscilador, en el cual dos salidas complementarias están continuamente invirtiendo su estado, a una rata determinada por los componentes Rc del circuito (resistencia-capacidad). Si la salida en Q es una serie de pulsos positivos cortos, la salida en no-Q será una serie de pulsos positivos largos,, equivalentes al tiempo que permanece en el nivel bajo la salida Q.
+
+Los multivibradores son usados donde quiera que sea necesario tener una hilera de pulsos u ondas cuadradas. Si se desea, la rata de repetición del circuito puede ser sincronizada por una fuente externa, tal como un pulso clock.
+
+<h4>SCHMITT TRIGGER</h4>
+Es un circuito biestable (dos estados), con una entrada y una salida. El nivel en la salida cambia agudamente, de una manera rápida, cuando el nivel de la señal de entrada excede un predeterminado valor, lo que permite su aplicación en conversión de ondas senoidales a ondas cuadradas, y en acondicionamiento eléctrico de señales (para facilitar el manejo de circuitos TTl con fuentes de señales No-TTl). También, el circuito Schmitt-Trigger puede ser usado para restaurar pulsos que han sido deteriorados por interferencias durante su transmisión.
+
+</ul>
+
+<h4>DIAGRAMAS DE TIEMPO</h4>
+El diagrama de tiempos para un circuito lógico es usualmente tan útil como el esquema electrónico. El diagrama de tiempos es una representación pictórica de la manera como los niveles lógicos varían en función del tiempo. Es de bastante utilidad cuando se desea conocer de un solo vistazo las características operacionales de un circuito, o se está buscando una falla en un proyecto digital. La figura 20 muestra el diagrama de tiempos para varias funciones de las variables lógicas A y B, mostradas en las dos filas superiores. La variable A está representada por un flujo de datos en serie, compuestos de alternantes 1's y dos 0's.
+ 
+    
+    </p></section></center></body>
+</html>

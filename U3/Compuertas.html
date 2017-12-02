@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html lang= "es">
+<head>
+<meta charset="UTF-8">
+<title> Compuertas</title>
+<link rel="stylesheet" type="text/css" href="../css/1.css">
+<h1>Compuertas|Unidad 3</h1>
+</head>
+<body>
+<center><section>
+    <p>A diferencia de los circuitos lógicos combinacionales, los circuitos secuenciales tiene memoria; pueden reflejar en su salida el efecto de una señal de entrada que hubo segundos o días antes.
+<br>Los circuitos AND, OR y NOT funcionan sin memoria. Por ejemplo, en el caso del circuito AND, una salida lógica 1 es obtenida únicamente durante el tiempo que todas las entradas estén simultáneamente en lógica 1. Si cada entrada pasa por lógica 1 de una manera secuencial, no-simultánea, la salida permanecerá aquí la necesidad en lógica 0.
+
+        <h4>RS FLIP - FLOP</h4>
+Un RS flip-flop llamado algunas veces un "set-reset" flip-flop, es un circuito con dos entradas y dos salidas. Las salidas son complementos entre sí, o sea que, cuando la una esté en alto, la otra estará en bajo. Deriva su nombre del hecho de poder quitar (reset) y poner (set) el estado alto en la salida Q. cuando se aplique un pulso en cada una de las dos entradas: un pulso alto en la entrada S (set) quita, "borra", el pulso alto puesto en anterioridad en Q. En la práctica la polaridad del pulso de manejo dependerá del tipo de compuertas con las cuales se haya implementado el RS flip-flop, tal como se puede observar en la figura 13.
+<br>Circuitos lógicos secuenciales De las tablas de verdad podemos deducir su funcionamiento teniendo en cuenta que, cuando Q tiene lógica 1, el flip-flop se considera "set" (puesto), y cuando Q tiene lógica 0 es porque el flop-flop está "reset" (cleared, borrado). Las dos salidas Q y no-Q son simétricas(iguales) en lo que a características eléctricas se refiere, por lo que, de acuerdo con las circunstancias, se podrá tomar una u otra como tal.
+
+<h4>CLOCKED RS FLIP-FLOP</h4>
+
+El flip-flop RS básico es "asynchronous" (no-sincronizado), responde a las entradas tan pronto como ellas ocurren; muestra cambios en la salida cada que se presentan cambios en Set y Reset. En ciertos procesos se requiere "to-synchronize" (sincronizar) la operación del RS flip-flop, de tal manera que sólo se produzcan cambios en la salida cuando se cumpla cierto requisito anterior. En caso contrario, las acciones se SET y RESET no deben alterar la salida Q. Una manera de sincronizar la operación de un RS Flip-Flop con otros circuitos lógicos, es colocar una compuerta a cada entrada, de tal forma que ellas respondan a S y R solamente cuando sean "habilitadas" (capacitadas) por un lógico 1 (nivel alto) procedente de un CLOCK. (un clock es un circuito secuencial generador de un tren de pulsos, "ceros" y "unos" de manera alternada). La figura 14 muestra un clocked Rs flip-flop(controlado, no sincronizado).
+
+<h4>DATA o D FLIP - FLOP</h4>
+El flip - flop tipo D es una cierta modficación introducida al flip-flop clocked Rs(controlado en su funcionamiento por los pulsos Clock en una sola línea común de entreda). 
+<br>Circuitos lógicos secuenciales Podemos apreciar que, es agregado un inversor a una de las dos entradas del flip-flop, de tal forma que la entrada restante y la entrada del inversor queden unidas. Lo anterior garantiza que las entradas a la sección RS sean siempre complementarias una de otra, y asegura que el estado lógico en la salida Q sserá siempre el mismo estado lógico, alto o bajo, del último pulso que llegó a la entrada D.
+<br>La información dada tiene un carácter general, ya que no se pueden dar conceptos concretos por razón de la amplia variedad de flip-flop que se fabrican en circuito integrado, aún dentro de un mismo tipo. Nos servirá para dejar cimentados ciertos principios, los cuales nos ayudarán a interpretar luego las diferentes tablas de verdad, dadas por el fabricante para facilitar al experimentador la comprensión del funcionamiento de una u otra referencia.
+<h4>JK FLIP - FLOP</h4>
+Probablemente es el flip-flop más usado en los circuitos secuenciales lógicos, por su capacidad para CONTAR y DIVIDIR. Entrega un pulso completo de salida por cada dos pulsos de entrada, característica tenida en cuenta por muchos para denominarlo, también, "toggle"(basculante, ondulante, Si - No - Si - No, etc.) flip-flop, o sencillamente un T flip-flop.
+<br>Básicamente, el JK flip-flop es un biestable RS flip-flop con compuertas (clocked) dispuestas de tal forma que la acción PONER - QUITAR (set - reset) sea llevada a cabo por una sola línea de entrada.
+<br>Básicamente, se puede considerar el JK flip-flop como un circuito biestable con una sola entrada y dos salidas, completamente entre sí. En la práctica, el circuito integrado dispone de dos entradas auxiliares, marcadas J y K, dispuestas para "condicionar}" el estado que debe tomar la salida a partir del momento que llegue la próxima transición activa del pulso clock.
+<br>Circuitos lógicos secuenciales La figura 16 muestra el circuito lógico y tabla de verdad para este flip-flop.
+Se puede observar que, de acuerdo a como se encuentren las entradas J y K, la salida Q puede operar como toggle o quedarse indefinidamente en un determinado estado, sin importar los pulsos en la entrada clock. Cuando se utiliza al flip-flop como contador o divisor, se pueden dejar libres las entradas J y K; en este caso, los pulsos cuya frecuencia se desea modificar, se deben poner en la entrada correspondiente al clock.
+<center><img src="css/imagenes/flip%20flop%20jk.png" width="500" height="300"></center>
+
+
+    </p></section></center></body></html>
